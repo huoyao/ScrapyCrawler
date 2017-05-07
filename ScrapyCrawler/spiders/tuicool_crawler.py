@@ -13,7 +13,7 @@ class TuicoolCrawlerSpider(CrawlSpider):
     start_urls = ['http://www.tuicool.com/ah/20/0?lang=1']
 
     rules = (
-        Rule(LinkExtractor(allow=r'ah/20/[0-1]\?lang=1'), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=r'ah/20/[0-20]\?lang=1'), callback='parse_item', follow=True),
     )
 
     def parse_item(self, response):
